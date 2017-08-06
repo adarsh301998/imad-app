@@ -7,6 +7,6 @@ element.innerHTML="Adarsh";
 // Moving image
 
 var m = document.getElementById("img");
-m.onClick = function() {
-  img.style.marginLeft='100px';  
+m.onclick = function() {
+  m.style.marginLeft='100px';  
 };
