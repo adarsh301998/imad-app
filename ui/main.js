@@ -6,7 +6,13 @@ element.innerHTML="Adarsh";
 
 // Moving image
 
+var margin=0;
+function moveRight(){
+ margin = margin + 10;
+ m.style.marginLeft = margin +'px';
+}
+
 var m = document.getElementById("img");
 m.onclick = function() {
-  m.style.marginLeft='100px';  
+  var interval = setInterval(moveRight, 100); 
 };
