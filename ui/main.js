@@ -6,10 +6,10 @@ element.innerHTML="Adarsh";
 
 // Moving image
 
-var margin=0;
+var marginLeft=0;
 function moveRight(){
- margin = margin + 10;
- m.style.marginLeft = margin +'px';
+ marginLeft = margin + 10;
+ m.style.marginLeft = marginLeft +'px';
 }
 
 var m = document.getElementById("img");
