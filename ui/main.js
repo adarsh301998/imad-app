@@ -8,7 +8,7 @@ element.innerHTML="Adarsh";
 
 var marginLeft=0;
 function moveRight(){
- marginLeft = margin + 10;
+ marginLeft = marginLeft + 10;
  m.style.marginLeft = marginLeft +'px';
 }
 
