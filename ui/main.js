@@ -8,5 +8,5 @@ element.innerHTML="Adarsh";
 
 var m = document.getElementById("img");
 m.onClick = function() {
-  m.style.marginLeft='100px';  
+  img.style.marginLeft='100px';  
 };
