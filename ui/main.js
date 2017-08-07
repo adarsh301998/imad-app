@@ -7,9 +7,7 @@ button.onclick = function() {
     //Create a object
     var request = new XMLHttpRequest();
     
-    //Make a request
-  request.open('GET','http://adarshagrawal38.imad.hasura-app.io/counter',true);
-  request.send(null);
+   
   
     //capture the response store in the variable
     request.onredystatechange = function(){
@@ -21,5 +19,8 @@ button.onclick = function() {
             }
         }
     };
+     //Make a request
+  request.open('GET','http://adarshagrawal38.imad.hasura-app.io/counter',true);
+  request.send(null);
  
 };
