@@ -26,8 +26,6 @@ button.onclick = function() {
  
 };
 
-var nameinput = document.getElementById('name');
-var n = nameinput.value;
 var submit = document.getElementById('submit_btn');
 
 submit.onclick = function() {
@@ -47,5 +45,7 @@ submit.onclick = function() {
         }
     }  
   };
+  var nameinput = document.getElementById('name');
+var n = nameinput.value;
   request.open('GET','http://adarshagrawal38.imad.hasura-app.io/submit-name?name=' + n, true);
 };
