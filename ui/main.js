@@ -11,11 +11,12 @@ button.onclick = function() {
   
     //capture the response store in the variable
     request.onredystatechange = function(){
-        if(request.readyState == XMLHttpRequest.DONE){
-            if(request.status == 200){
-                var c = request.responseText;
-               var span = document.getElementById("count");
-                 span.innerHTML = c.toString();
+        if(request.readyState === XMLHttpRequest.DONE){
+            //TAke some action
+            if(request.status === 200){
+                var c = request.ResponseText;
+                var span = document.getElementById('span');
+                span.innerHtml = c.toString();
             }
         }
     };
