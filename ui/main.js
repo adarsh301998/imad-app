@@ -33,7 +33,7 @@ submit.onclick = function() {
   
   request.onreadystatechange = function() {
     if(request.readyState === XMLHttpRequest.DONE) {
-        if(request.status === 200) {
+        
             var names = request.responseText;
             names = JSON.parse(names);
             var list = '';
@@ -42,7 +42,7 @@ submit.onclick = function() {
               }
               var ul = document.getElementById('namelist');
               ul.innerHTML = list;
-        }
+        
     }  
   };
   var nameinput = document.getElementById('name');
