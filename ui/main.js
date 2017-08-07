@@ -14,7 +14,7 @@ button.onclick = function() {
         if(request.readyState === XMLHttpRequest.DONE){
             //TAke some action
             if(request.status === 200){
-                var c = request.ResponseText;
+                var c = request.responseText;
                 var span = document.getElementById('count');
         span.innerHTML = c.toString();
             }
@@ -31,12 +31,21 @@ var n = nameinput.value;
 var submit = document.getElementById('submit_btn');
 
 submit.onclick = function() {
+  var request = new XMLHttpRequest();
   
-  var name = ["name1", "name2", "name3"];
-  var list = '';
-  for(var i=0; i<name.length; i++) {
-      list += '<li>' + name[i] + '</li>';
-  }
-  var ul = document.getElementById('namelist');
-  ul.innerHTML = list;
+  request.onreadystatechange = function() {
+    if(request.readyState === XMLHttpRequest.DONE) {
+        if(request.status === 200) {
+            var names = request.responseText;
+            names = JSON.parse(names);
+            var list = '';
+              for(var i=0; i<name.length; i++) {
+                  list += '<li>' + name[i] + '</li>';
+              }
+              var ul = document.getElementById('namelist');
+              ul.innerHTML = list;
+        }
+    }  
+  };
+  request.open('GET','http://adarshagrawal38.imad.hasura-app.io/submit-name?name=' + n, true);
 };
