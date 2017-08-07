@@ -14,11 +14,11 @@ button.onclick = function() {
     //capture the response store in the variable
     request.onredystatechange = function(){
         if(request.readyState == XMLHttpRequest.Done){
-            //if(request.status == 200){
-              //  var c = request.responseText();
-                //var span = document.getElementById("count");
-               //  span.innerHTML = c.toString();
-           // }
+            if(request.status == 200){
+                var c = request.responseText();
+               var span = document.getElementById("count");
+                 span.innerHTML = c.toString();
+            }
         }
     };
   
