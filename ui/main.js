@@ -19,6 +19,6 @@ button.onclick = function() {
         }
     };
   //Make a request
-  request.open('GET','http://adarshagrawal38.imad.hasura-app.io/counter');
+  request.open('GET','http://adarshagrawal38.imad.hasura-app.io/counter',true);
   request.send(null);
 };
