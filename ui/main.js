@@ -15,11 +15,11 @@ button.onclick = function() {
     request.onredystatechange = function(){
         if(request.readyState == XMLHttpRequest.Done){
             if(request.status == 200){
-                var c = request.responseText();
+                var c = request.responseText;
                var span = document.getElementById("count");
                  span.innerHTML = c.toString();
             }
         }
     };
-  
+ 
 };
