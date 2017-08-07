@@ -15,8 +15,8 @@ button.onclick = function() {
             //TAke some action
             if(request.status === 200){
                 var c = request.ResponseText;
-                var span = document.getElementById('span');
-                span.innerHtml = c.toString();
+                var span = document.getElementById('count');
+        span.innerHtml = c.toString();
             }
         }
     };
