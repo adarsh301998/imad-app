@@ -100,7 +100,7 @@ var names=[];
 app.get('/submit-name/:na', function(req, res){
     var name = req.params.na;
     
-    names.puch(name);
+    names.push(name);
     res.send(JSON.stringify(names));
 });
 
