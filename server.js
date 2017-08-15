@@ -1,6 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+var crpto = require('crypto');
 
 var app = express();
 app.use(morgan('combined'));
@@ -77,6 +78,14 @@ function createTemplate(data){
     `;
     return htmlTemplate;
 }
+function hased(input,salt) {
+    var hased = crypto.pbkdf25Sync(input, salt, 10000, 512, 'sha512');
+    return hased.toString('hex');
+}
+app.get('/hash/:input', function(req,res){
+   var hasedString = hased(req.params.input, 'this-is-some-random-string');
+   res.send(hasedString);
+});
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
