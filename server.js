@@ -79,7 +79,7 @@ function createTemplate(data){
     return htmlTemplate;
 }
 function hased(input,salt) {
-    var hased = crypto.pbkdf25Sync(input, salt, 10000, 512, 'sha512');
+    var hased = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
     return hased.toString('hex');
 }
 app.get('/hash/:input', function(req,res){
